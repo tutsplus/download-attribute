@@ -1,0 +1,156 @@
+@gray-darker       : #555;
+@gray-dark         : #999;
+@gray              : #ddd;
+@gray-light        : #f3f3f3;
+@gray-lighter      : #e6e9ed;
+
+@body-bg           : #f5f7fa;
+@body-color        : @gray-darker;
+@header-bg         : #196e76;
+@heading-bg        : #434a54;
+
+@button-bg         : @gray-light;
+@button-primary-bg : #0074d9;
+@button-danger-bg  : #c0392b;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.cf:before,
+.cf:after {
+  display: table;
+
+  content: ' ';
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+
+  margin: 0;
+
+  color: @body-color;
+  background-color: @body-bg;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+  padding: 10px;
+  a {
+    display: block;
+  }
+}
+mark {
+  padding: 0 5px;
+
+  background-color: @gray;
+}
+::backdrop {
+  background-color: fadeout(#000, 50%);
+}
+.btn {
+  padding: 10px 15px;
+
+  cursor: pointer;
+
+  color: @gray-darker;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: @gray-light;
+  &.disabled {
+    cursor: not-allowed;
+
+    color: @gray;
+    border-color: @gray;
+  }
+}
+.btn-group {
+  padding: 15px 20px;
+
+  text-align: right;
+
+  background-color: lighten(@gray-lighter, 5%);
+}
+
+.btn-primary {
+  color: #fff;
+  border-color: darken(@button-primary-bg, 5%);
+  background-color: @button-primary-bg;
+  &:hover {
+    background-color: darken(@button-primary-bg, 5%);
+  }
+}
+.btn-danger {
+  color: #fff;
+  border-color: darken(@button-danger-bg, 5%);
+  background-color: @button-danger-bg;
+  &:hover {
+    background-color: darken(@button-danger-bg, 5%);
+  }
+}
+.btn-cancel {
+  color: @gray-dark;
+  border-color: @gray;
+  &:hover {
+    background-color: darken(@button-bg, 5%);
+  }
+}
+
+.site-header {
+  text-align: center;
+
+  background-color: @header-bg;
+  h1,
+  a {
+    padding: 15px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+  }
+  h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 300;
+
+    display: block;
+
+    text-decoration: none;
+
+    background-color: darken(@header-bg, 10%);
+  }
+}
+
+
+
+@media screen and (min-width: 630px) {
+  .site-header {
+    text-align: none;
+    h1,
+    a {
+      font-size: 12px;
+    }
+    h1 {
+      float: left;
+    }
+    a {
+      float: right;
+    }
+  }
+}
