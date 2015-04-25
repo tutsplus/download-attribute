@@ -40,6 +40,7 @@ body {
 
   color: @body-color;
   background-color: @body-bg;
+  text-align: center;
 }
 img {
   max-width: 100%;
@@ -137,6 +138,25 @@ mark {
   }
 }
 
+.btn {
+  display: inline-block;
+  padding: 18px 25px;
+  text-decoration: none;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #555;
+  margin-top: 80px;
+}
+.btn-download {
+  background-color: #00539F;
+  color: #fff;
+  border-color: darken(#00539F, 5%);
+  &:hover {
+    background-color: lighten(#00539F, 5%);
+  }
+}
 
 
 @media screen and (min-width: 630px) {
