@@ -124,6 +124,11 @@ mark {
 .btn-download:hover {
   background-color: #0060b9;
 }
+.download-instruction {
+  font-size: 12px;
+  margin-top: 20px;
+  color: #8fa5c7;
+}
 @media screen and (min-width: 630px) {
   .site-header {
     text-align: none;
